@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profil Nurfadillah</title>
+  <style>
+    body{
+      margin:0;
+      font-family:'Poppins',Arial,Helvetica,sans-serif;
+      background:#fce4ec;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      text-align:center;
+      color:#ad1457;
+    }
+
+    .container{
+      display:flex;
+      gap:30px;
+      align-items:center;
+      padding:20px;
+      background:transparent; /* menyatu dengan background */
+    }
+
+    .circle-img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      overflow:hidden;
+      border:none;
+    }
+    .circle-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    h1{
+      font-size:36px;
+      margin:0 0 10px 0;
+    }
+
+    .desc{
+      font-size:12px;
+      max-width:300px;
+      margin:0 auto 20px auto;
+    }
+
+    .buttons{
+      display:flex;
+      gap:15px;
+      justify-content:center;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      padding:10px 20px;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:600;
+      color:white;
+      background:#ad1457;
+      transition:0.3s;
+      border-radius:30px;
+    }
+    .btn:hover{
+      opacity:0.8;
+    }
+
+    /* Profil box putih dengan border-radius */
+    #profil{
+      display:none;
+      background:white;
+      padding:15px 25px;
+      border-radius:15px;
+      margin-top:15px;
+      font-size:12px;
+      line-height:1.5;
+      color:#ad1457;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="circle-img">
+      <img src="foto.jpg" alt="Foto Anda" />
+    </div>
+
+    <div class="text">
+      <h3>Hi, I'm Nurfadillah</h3>
+      <p class="desc">A passionate Informatics Engineering student who loves learning, growing, and exploring technology.</p>
+
+      <div class="buttons">
+        <a href="javascript:void(0)" id="btnProfil" class="btn">Profile</a>
+      </div>
+
+      <div id="profil">
+        <p><strong>NIM:</strong> 2023020103</p>
+        <p><strong>Prodi:</strong> Teknik Informatika</p>
+        <p><strong>Asal Sekolah:</strong> SMA 8 Sinjai</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const btnProfil = document.getElementById('btnProfil');
+    const profilBox = document.getElementById('profil');
+
+    btnProfil.addEventListener('click', () => {
+      profilBox.style.display = profilBox.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
